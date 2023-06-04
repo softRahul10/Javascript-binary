@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8" />
+            <title>API Call</title>
+      </head>
+
+      <body>
+            <script>
+                  // accessing img
+                  fetch(
+                        "https://api.giphy.com/v1/gifs/translate?api_key=Jr8qe04Ue9ufprIg5c6H2qP0DphFz0rS&s=money", { mode: "cors" }
+                  )
+                        .then((response) => {
+                              return response.json();
+                        })
+                        .then((data) => {
+                              const fetchUrl = data.data.images.original.url;
+                              const body = document.body;
+                              const img = document.createElement('img');
+                              img.src = fetchUrl;
+                              body.append(img)
+                        });
+            </script>
+      </body>
+
+</html>
