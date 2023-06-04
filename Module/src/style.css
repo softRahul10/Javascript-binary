@@ -1,0 +1,8 @@
+.special {
+    background: #000;
+    color: #fff;
+    margin: -1em;
+    padding: 1em;
+    text-align: center;
+    background: url('./pic.jpg');
+}
